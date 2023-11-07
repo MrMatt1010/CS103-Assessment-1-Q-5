@@ -1,5 +1,5 @@
 // CS103 Assessment 1 Q 5
-//Student Name: Matt Taylor
+// Student Name: Matt Taylor
 // This program is a Shape Guessing game as outlined by the brief 
 
 #include <iostream>
@@ -10,7 +10,7 @@
 using namespace std;
 
 //Function to display the main menu
-void displayMenu() {
+void displayMainMenu() {
     cout << "\nMain Menu:\n";
     cout << "1.Play\n";
     cout << "2. Final Score\n";
@@ -70,8 +70,28 @@ void displayFinalScore(int score) {
 }
 
 int main(){
+    srand(static_cast<unsigned>(time(0)));
+    int score = 0;
+
+    while (true) {
+        displayMainMenu();
+        int choice;
+        cin >> choice;
+
+        switch (choice) {
+        case 1:
+            score += playGame(score);
+            break;
+        case 2:
+            displayFinalScore(score);
+            break;
+        case 3:
+            cout << "Thanks for playing. Goodbye!\n";
+            return 0;
+        default:
+            cout << "Invalid Choice. Please enter a valid option.\n";
+        }
+    }
 
 
-
-    return 0;
-}
+   
