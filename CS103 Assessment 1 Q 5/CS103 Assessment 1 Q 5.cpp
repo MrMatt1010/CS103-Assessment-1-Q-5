@@ -12,7 +12,7 @@ using namespace std;
 //Function to display the main menu
 void displayMainMenu() {
     cout << "\nMain Menu:\n";
-    cout << "1.Play\n";
+    cout << "1. Play\n";
     cout << "2. Final Score\n";
     cout << "3. Exit Game\n";
 }
@@ -45,7 +45,7 @@ int playGame(int &score) {
     cout << "a. Rectangle\n";
     cout << "b. Triangle";
     cout << "c. Square\n";
-    cout << "d. None of the above";
+    cout << "d. None of the above\n";
 
     char userAnswer;
     cin >> userAnswer;
@@ -69,7 +69,7 @@ void displayFinalScore(int score) {
     cout << "\nFinal Score: " << score << "\n";
 }
 
-int main(){
+int main() {
     srand(static_cast<unsigned>(time(0)));
     int score = 0;
 
@@ -92,6 +92,6 @@ int main(){
             cout << "Invalid Choice. Please enter a valid option.\n";
         }
     }
-
+}
 
    
