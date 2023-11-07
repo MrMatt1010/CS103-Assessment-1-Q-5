@@ -42,5 +42,36 @@ int playGame(int &score) {
         cout << " |________|\n";
     }
 
+    cout << "a. Rectangle\n";
+    cout << "b. Triangle";
+    cout << "c. Square\n";
+    cout << "d. None of the above";
+
+    char userAnswer;
+    cin >> userAnswer;
+
+    // Clear the input buffer to prevent issues with the program crashing
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+    if (tolower(userAnswer) == tolower(randomShape[0])) {
+        cout << "Correct! You earned 10 points.\n";
+        return 10;
+    }
+    else {
+        cout << "Incorrect. The correct answer was: " << randomShape << "\n";
+        return 0;
+    }
+
+}
+
+// Function to display the final score for the user
+void displayFinalScore(int score) {
+    cout << "\nFinal Score: " << score << "\n";
+}
+
+int main(){
+
+
+
     return 0;
 }
