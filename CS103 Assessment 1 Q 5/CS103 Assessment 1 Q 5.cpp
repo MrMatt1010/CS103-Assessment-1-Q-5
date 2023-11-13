@@ -43,7 +43,7 @@ int playGame(int &score) {
     }
 
     cout << "a. Rectangle\n";
-    cout << "b. Triangle";
+    cout << "b. Triangle\n";
     cout << "c. Square\n";
     cout << "d. None of the above\n";
 
